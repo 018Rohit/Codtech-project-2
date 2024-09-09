@@ -9,7 +9,7 @@ typedef struct {
     char correct_answer;
 } QuizQuestion;
 
-// Function prototypes
+
 void ask_question(QuizQuestion *q);
 void display_feedback(int correct);
 
@@ -38,7 +38,7 @@ int main() {
     for (int i = 0; i < NUM_QUESTIONS; i++) {
         ask_question(&quiz[i]);
         printf("Your answer: ");
-        scanf(" %c", &answer);  // Note the space before %c to consume any leftover whitespace
+        scanf(" %c", &answer);  
         if (answer == quiz[i].correct_answer) {
             printf("Correct!\n");
             score++;
